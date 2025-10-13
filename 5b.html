@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fixed Flipped Background Example</title>
+  <style>
+    body {
+      margin: 0;
+      height: 200vh; /* Makes the page scrollable */
+    }
+    .background {
+      position: fixed;
+      top: 20%; /* Halfway down the page */
+      left: 0;
+      width: 100%;
+      height: 200px; /* Adjust as needed */
+      background-image:url("link.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transform: rotate(-15deg); /* Flip horizontally */
+      z-index: -1; /* Place behind content */
+    }
+    .content {
+      padding: 50px;
+      font-size: 20px;
+    }
+    h1{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+   <h1><u>Scroll Down</ul></h1>
+  <div class="background"></div>
+
+  <div class="content">
+    <p>This is an example page with a background image fixed halfway down and flipped horizontally.</p>
+    <p>Keep scrolling to see the background image stay in place.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus velit sit amet justo feugiat, vel cursus lorem tincidunt.</p>
+  </div>
+</body>
+</html>
