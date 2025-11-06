@@ -1,0 +1,37 @@
+<html> 
+<head>    <script> 
+        function factorial(n) { 
+            if (n === 0 || n === 1) return 1; 
+            return n * factorial(n - 1);  }     
+ // Fibonacci series up to n terms 
+        function fibonacciSeries(n) { 
+            let series = []; 
+            let a = 0, b = 1; 
+            for (let i = 0; i < n; i++) { 
+                series.push(a); 
+                let c = a + b; 
+                a = b; 
+                b = c;  } 
+            return series;  } 
+function showFactorial() { 
+            let num = parseInt(document.getElementById("num").value); 
+            let fact = factorial(num); 
+            document.getElementById("output").innerHTML = 
+                "Factorial of " + num + " = " + fact; 
+        }  function showFibonacci() { 
+            let num = parseInt(document.getElementById("num").value); 
+            let fibo = fibonacciSeries(num); 
+            document.getElementById("output").innerHTML = 
+                "Fibonacci series up to " + num + " terms = " + fibo.join(", ");  } 
+    </script>  
+</head> 
+<body> 
+    <h2>Factorial & Fibonacci Calculator</h2> 
+    Enter a number: <input type="text" id="num"><br><br> 
+ 
+    <button onclick="showFactorial()">Factorial</button> 
+    <button onclick="showFibonacci()">Fibonacci</button> 
+ 
+    <p id="output"></p> 
+</body> 
+</html> 
