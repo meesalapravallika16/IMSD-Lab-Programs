@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Internal and External JS</title> 
+    <!-- External JavaScript --> 
+    <script src="6a.js"></script> 
+</head> 
+<body> 
+    <h2>Internal and External JavaScript Example</h2> 
+ 
+    <!-- Internal JavaScript --> 
+    <script> 
+        document.write("Hello from Internal JavaScript!<br>"); 
+    </script> 
+ 
+    <button onclick="externalMassage()">Click for External JS</button> 
+</body> 
+</html>
+script.js: 
+// script.js 
+function externalMassage() 
+{ 
+alert("Hello from external Javascript!"); 
+} 
